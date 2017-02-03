@@ -1,0 +1,8 @@
+<div 
+      (mouseenter)="setStatus(true, $event)"
+      (mouseleave)="setStatus(false, $event)"
+      (touchstart)="setStatus(true, $event)"
+      (touchend)="setStatus(false, $event)"
+      [@statusChange]="statusStr">
+          <ng-content></ng-content>
+  <div>
