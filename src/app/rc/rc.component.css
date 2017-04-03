@@ -1,0 +1,33 @@
+.btn-group{
+    width: 100%;
+    max-width: 330px;
+}
+.btn-source{
+    padding: 0.5rem;
+    width: 20%;
+}
+.btn-source img{
+    width: 100%;
+    max-width: 60px;
+}
+.pad{
+    margin-top: 20px;
+}
+.pad .btn{
+    width: 80px;
+}
+.pad .volume{
+    margin-left: 10px;
+}
+.pad .volume .btn{
+    width: 45px;
+    height: 58px;
+}
+
+.pad .playback{
+    margin-top: 5px;
+}
+
+.pad .playback .btn{
+    width: 57px;
+}

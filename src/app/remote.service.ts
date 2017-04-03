@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { Headers, Http } from '@angular/http';
 import { DeviceSource } from './device-source'
 import { DEVICE_SOURCES } from './mock-device-sources';
+import { environment } from '../environments/environment';
 
 import { CableChannel } from './cable-channel'
 import { Command } from './command'
@@ -11,7 +12,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class RemoteService {
-    baseUrl = 'http://192.168.1.101:9589/api/remote';
+    baseUrl = environment.remoteUrl;;
     //baseUrl = 'http://localhost:9589/api/remote';
     headers = new Headers({'Content-Type': 'application/json'});
     
@@ -45,6 +46,10 @@ export class RemoteService {
         return Promise.resolve(DEVICE_SOURCES); 
     }
 
+    setActiveDevice(id:number): void {
+        DEVICE_SOURCES.map((i) => { console.log(id); i.active = i.id == id;});
+    }
+
     watchDeviceSource(source:DeviceSource):Promise<boolean>{
         let command = {
             'command': 'watch',
@@ -52,7 +57,7 @@ export class RemoteService {
                 'device': source.name
             }
         };
-
+        this.setActiveDevice(source.id);
         return this._sendCommand(command);
     }
 

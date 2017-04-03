@@ -20,8 +20,7 @@ export class ACCommand extends CommandData{
 }
 
 export class KeyCommand extends CommandData{
-    device: string;
-    key: string;
+    constructor(private device: string, private key: string){ super(); }
 }
 
 export class Command{

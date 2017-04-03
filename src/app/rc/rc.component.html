@@ -1,0 +1,50 @@
+<div class="card card-block">
+    <div class="card-title">
+        <h3>Remote</h3>
+        <a class="btn btn-danger btn-card-close"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+    </div>
+    <div class="card-text">
+        <div  class="btn-group"  *ngIf="sources">
+          <button *ngFor="let source of sources" class="btn btn-secondary btn-source">
+            <img class="img-responsive" (click)="selectSource(source)" [src]="source.img()" />
+          </button>
+        </div>
+        <div class="pad container">
+          <table class="pull-left">
+            <tr>
+              <td><button class="btn" (click)="sendKey()">Exit</button></td>
+              <td><button class="btn" (click)="sendKey('KEY_UP')"><i class="fa fa-chevron-up" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_GUIDE')">Guide</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn" (click)="sendKey('KEY_LEFT')"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('key_ok')">OK</button></td>
+              <td><button class="btn" (click)="sendKey('KEY_RIGHT')"><i class="fa fa-chevron-right" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn" (click)="sendKey()"><i class="fa fa-rotate-left" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_DOWN')"><i class="fa fa-chevron-down" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_MUTE','denon')"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button></td>
+            </tr>
+          </table>
+          <table class="volume">
+            <tr>
+              <td><button class="btn" (click)="sendKey('KEY_VOLUMEUP','denon')"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn"  (click)="sendKey('KEY_VOLUMEDOWN','denon')"><i class="fa fa-minus" aria-hidden="true"></i></button></td>
+            </tr>
+          </table>
+
+          <table class="playback">
+            <tr>
+              <td><button class="btn" (click)="sendKey('KEY_REWIND')"><i class="fa fa-fast-backward" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_PAUSE')"><i class="fa fa-pause" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_PLAY')"><i class="fa fa-play" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_FASTFORWARD')"><i class="fa fa-fast-forward" aria-hidden="true"></i></button></td>
+              <td><button class="btn" (click)="sendKey('KEY_RECORD')"><i class="fa fa-stop-circle" aria-hidden="true"></i></button></td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div>

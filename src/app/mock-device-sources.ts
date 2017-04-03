@@ -1,11 +1,10 @@
 import {DeviceSource} from './device-source'
 
-export const DEVICE_SOURCES:[DeviceSource]=
+export const DEVICE_SOURCES:Array<DeviceSource>=
 [
-    {id: 1, dispayName: 'TV', name:'tv'},
-    {id: 2, dispayName: 'Chrome', name:'chrome'},
-    {id: 3, dispayName: 'Cable', name:'cable'},
-    {id: 4, dispayName: 'XBox', name:'xbox'},
-    {id: 4, dispayName: 'Pi', name:'pi'},
-    
+    new DeviceSource(1,'TV','tv',false),
+    new DeviceSource(2,'Chrome','chrome',false),
+    new DeviceSource(3,'Cable','cable',false),
+    new DeviceSource(4,'XBox','xbox',false),
+    new DeviceSource(5,'Pi','pi',false),
 ];

@@ -10,6 +10,7 @@ import { AcComponent } from './ac/ac.component';
 import { ChannelSelectorComponent } from './channel-selector/channel-selector.component';
 import { DeviceSelectorComponent } from './device-selector/device-selector.component';
 import { SwitchComponent } from 'angular2-bootstrap-switch/components';
+import { RcComponent } from './rc/rc.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SwitchComponent } from 'angular2-bootstrap-switch/components';
     AcComponent,
     ChannelSelectorComponent,
     DeviceSelectorComponent,
-    SwitchComponent
+    SwitchComponent,
+    RcComponent
   ],
   imports: [
     BrowserModule,
