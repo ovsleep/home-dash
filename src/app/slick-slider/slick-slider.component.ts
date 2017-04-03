@@ -58,7 +58,7 @@ export class SlickSliderComponent implements AfterContentInit{
         for (var key in this.options) {
             this.defaultOptions[key] = this.options[key];
         }
-        
-        this.$element = $(this.el.nativeElement).slick(this.defaultOptions);
+
+        this.$element = jQuery(this.el.nativeElement).slick(this.defaultOptions);
     }
 }

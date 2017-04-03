@@ -11,6 +11,7 @@ import { ChannelSelectorComponent } from './channel-selector/channel-selector.co
 import { DeviceSelectorComponent } from './device-selector/device-selector.component';
 import { SwitchComponent } from 'angular2-bootstrap-switch/components';
 import { RcComponent } from './rc/rc.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RcComponent } from './rc/rc.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],
