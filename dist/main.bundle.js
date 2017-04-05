@@ -624,8 +624,8 @@ module.exports = __webpack_require__(79);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
     production: false,
-    remoteUrl: 'http://127.0.0.1:9589/api/remote',
-    directvUrl: 'http://127.0.0.1:9588/api/directv'
+    remoteUrl: 'http://192.168.1.131:9589/api/remote',
+    directvUrl: 'http://192.168.1.131:9588/api/directv'
 };
 //# sourceMappingURL=environment.js.map
 
